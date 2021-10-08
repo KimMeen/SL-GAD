@@ -3,7 +3,7 @@
 A PyTorch implementation of "[Generative and Contrastive Self-Supervised Learning for Graph Anomaly Detection](https://arxiv.org/pdf/2108.09896.pdf)", <em>IEEE Transactions on Knowledge and Data Engineering (TKDE)</em>.
 
 <p align="center">
-<img src="./SL-GAD.png" width="1200">
+<img src="./SL-GAD.png" width="800">
 </p>
 
 ## Dependencies
