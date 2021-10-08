@@ -7,6 +7,9 @@ import scipy.io as sio
 import random
 import dgl
 
+###############################################
+# Forked from GRAND-Lab/CoLA                  #
+###############################################
 
 def parse_skipgram(fname):
     with open(fname) as f:

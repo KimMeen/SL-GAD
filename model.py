@@ -4,6 +4,9 @@ import torch.nn.functional as F
 
 
 class GCN(nn.Module):
+    """
+    Forked from GRAND-Lab/CoLA
+    """
     def __init__(self, in_ft, out_ft, act, bias=True):
         super(GCN, self).__init__()
         self.fc = nn.Linear(in_ft, out_ft, bias=False)
@@ -37,6 +40,9 @@ class GCN(nn.Module):
 
 
 class AvgReadout(nn.Module):
+    """
+    Forked from GRAND-Lab/CoLA
+    """
     def __init__(self):
         super(AvgReadout, self).__init__()
 
@@ -45,6 +51,9 @@ class AvgReadout(nn.Module):
 
 
 class MaxReadout(nn.Module):
+    """
+    Forked from GRAND-Lab/CoLA
+    """
     def __init__(self):
         super(MaxReadout, self).__init__()
 
@@ -53,6 +62,9 @@ class MaxReadout(nn.Module):
 
 
 class MinReadout(nn.Module):
+    """
+    Forked from GRAND-Lab/CoLA
+    """
     def __init__(self):
         super(MinReadout, self).__init__()
 
@@ -61,6 +73,9 @@ class MinReadout(nn.Module):
 
 
 class WSReadout(nn.Module):
+    """
+    Forked from GRAND-Lab/CoLA
+    """
     def __init__(self):
         super(WSReadout, self).__init__()
 
@@ -75,6 +90,9 @@ class WSReadout(nn.Module):
 
 
 class Discriminator(nn.Module):
+    """
+    Forked from GRAND-Lab/CoLA
+    """
     def __init__(self, n_h, negsamp_round):
         super(Discriminator, self).__init__()
         self.f_k = nn.Bilinear(n_h, n_h, 1)

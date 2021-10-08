@@ -23,10 +23,10 @@ def str2bool(v):
 
 parser.add_argument('--expid', type=int)
 parser.add_argument('--device', type=str, default='cuda:0')
-parser.add_argument('--dataset', type=str, default='cora')  # 'BlogCatalog' 'Flickr' 'ACM' 'cora' 'citeseer' 'pubmed'
+parser.add_argument('--dataset', type=str, default='BlogCatalog')
 parser.add_argument('--lr', type=float)
 parser.add_argument('--weight_decay', type=float, default=0.0)
-parser.add_argument('--runs', type=int, default=5)
+parser.add_argument('--runs', type=int, default=1)
 parser.add_argument('--embedding_dim', type=int, default=64)
 parser.add_argument('--patience', type=int, default=400)
 parser.add_argument('--num_epoch', type=int)
@@ -95,7 +95,7 @@ if __name__ == '__main__':
     for run in range(args.runs):
         # setup seed
         seed = seeds[run]
-        print('\n# Run:{} with random seed:{}'.format(run, seed), flush=True)
+        print('\n# Run:{}'.format(run), flush=True)
         dgl.random.seed(seed)
         np.random.seed(seed)
         torch.manual_seed(seed)
